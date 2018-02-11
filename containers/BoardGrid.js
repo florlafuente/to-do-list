@@ -1,5 +1,5 @@
 import React from 'react'
-import Board from '../components/Board'
+import Board from './Board'
 import NewBoard from '../components/NewBoard'
 
 export default class extends React.Component {
@@ -20,6 +20,10 @@ export default class extends React.Component {
     const newBoard = {}
     this.setState({
       boards: this.state.boards.concat(newBoard)})
+  }
+
+  addTask = () => {
+    console.log(task)
   }
 
   render() {

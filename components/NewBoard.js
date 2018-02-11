@@ -5,7 +5,7 @@ export default ( { addNewBoard} ) => (
     <style jsx>{`
       .new-board-card {
         align-items: center;
-        border: 2px var(--light-orange) solid;
+        border: 2px var(--light-orange) dotted;
         border-radius: 5%;
         color: var(--light-orange);
         display: flex;
