@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start"
   },
-  "author": "Flor Lafuente",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "next": "^5.0.0",

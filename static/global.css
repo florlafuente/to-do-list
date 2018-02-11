@@ -1,0 +1,63 @@
+@font-face {
+  font-family: Dosis-Regular;
+  src: url(./fonts/Dosis-Regular.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Bold;
+  src: url(./fonts/Dosis-Bold.ttf);
+}
+
+@font-face {
+  font-family: Dosis-SemiBold;
+  src: url(./fonts/Dosis-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Medium;
+  src: url(./fonts/Dosis-Medium.ttf);
+}
+
+@font-face {
+  font-family: Dosis-Light;
+  src: url(./fonts/Dosis-Light.ttf);
+}
+
+@font-face {
+  font-family: Dosis-ExtraLight;
+  src: url(./fonts/Dosis-ExtraLight.ttf);
+}
+
+:root {
+  /*Colors*/
+  --white: #ffffff;
+  --black: #000000;
+  --light-grey: #bdbdbd;
+  --dark-grey: #212121;
+  --light-yellow: #fff9c4;
+  --light-orange: #ffcc80;
+  --dark-orange: #f57c00 ;
+
+  /*Fonts*/
+  --regular: 'Dosis-Regular';
+  --medium: 'Dosis-Medium';
+  --semibold: 'Dosis-Semibold';
+  --bold: 'Dosis-Bold';
+  --light: 'Dosis-Light';
+  --extralight: 'Dosis-ExtraLight';
+  
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--light-yellow);
+  box-sizing: border-box;
+  font-family: var(--regular), 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: var(--light-orange);
+  font-size: 2.4rem;
+}
