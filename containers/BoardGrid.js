@@ -6,12 +6,8 @@ export default class extends React.Component {
   constructor(props) {
     super(props)
     this.state= {
-      'boards': [
-        {
-          'name': 'Home',
-          'tasks': ['Buy milk', 'Wash clothes', 'Clean the fridge']
-        }
-      ]
+      'home': ['Buy milk', 'Wash clothes', 'Clean the fridge'],
+      'school': ['Do homework', 'Study']
     }
     this.addNewBoard = this.addNewBoard.bind(this)
   }
@@ -19,11 +15,23 @@ export default class extends React.Component {
   addNewBoard = () =>  {
     const newBoard = {}
     this.setState({
-      boards: this.state.boards.concat(newBoard)})
+      'title': []
+    })
   }
 
-  addTask = () => {
-    console.log(task)
+  addTask = (board, task) => {
+    this.setState({
+      [board]: this.state[board].concat(task)
+    })
+  }
+
+  removeTask = (board, task) => {
+    const index = this.state[board].indexOf(task)
+    const tasks = this.state[board].slice()
+    tasks.splice(index,1)
+    this.setState({
+      [board]: tasks
+    })
   }
 
   render() {
@@ -31,8 +39,8 @@ export default class extends React.Component {
       <div className='board-grid'>
         <h1>To do list</h1>
         <div className='board-container'>
-          {this.state.boards.map((b,i)=> 
-            <Board key={i} title={b.name} tasks={b.tasks} />
+          {Object.keys(this.state).map((k,i)=> 
+            <Board key={i} title={k} tasks={this.state[k]} addTask={this.addTask} removeTask={this.removeTask} />
           )}
           <NewBoard addNewBoard={this.addNewBoard}/>
         </div>
@@ -43,7 +51,7 @@ export default class extends React.Component {
           .board-container {
             display: flex;
             flex-direction: row;
-            flex-wrap: no-wrap;
+            flex-wrap: wrap;
             justify-content: flex-start;
             margin-top: 40px;
           }
