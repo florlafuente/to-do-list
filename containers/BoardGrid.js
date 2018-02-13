@@ -6,8 +6,8 @@ export default class extends React.Component {
   constructor(props) {
     super(props)
     this.state= {
-      'home': ['Buy milk', 'Wash clothes', 'Clean the fridge'],
-      'school': ['Do homework', 'Study']
+      'to do': ['Buy milk', 'Wash clothes', 'Clean the fridge'],
+      'done': ['Go to supermarket']
     }
     this.addNewBoard = this.addNewBoard.bind(this)
   }
@@ -37,7 +37,7 @@ export default class extends React.Component {
   render() {
     return (
       <div className='board-grid'>
-        <h1>To do list</h1>
+        <h1>To do list ✍️</h1>
         <div className='board-container'>
           {Object.keys(this.state).map((k,i)=> 
             <Board key={i} title={k} tasks={this.state[k]} addTask={this.addTask} removeTask={this.removeTask} />
