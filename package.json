@@ -8,12 +8,15 @@
     "start": "next start"
   },
   "author": "Flor Lafuente",
-  "repository" :{ 
-    "type" : "git",
-    "url" : "https://github.com/florlafuente/to-do-list"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/florlafuente/to-do-list"
   },
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.4",
     "next": "^5.0.0",
     "react": "^16.2.0",
     "react-dnd": "^2.5.4",
